@@ -1,0 +1,20 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 10px;
+}
+
+header {
+  background-color: #d7ecff;
+  padding: 1px 1px 1px 10px;
+  vertical-align: middle;
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #5e6a77;
+  padding-left: 50px;
+}
