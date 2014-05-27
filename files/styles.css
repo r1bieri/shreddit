@@ -1,5 +1,6 @@
 body {
-  padding-top: 51px;  
+  padding-top: 51px;
+  background-color: #EEEEEE;
 }
 
 .text-center {
@@ -21,8 +22,23 @@ body {
 }
 
 #sidebar li {
-  border:0 #f2f2f2 solid;
-  border-bottom-width:1px;
+  border: 1px #95BCF2 solid;
+  margin: 2px;
+}
+
+#sidebar li a {
+  background-color: #B7DCFF;
+  color: #6972A6;
+}
+
+#sidebar li a.active, #sidebar li a:hover.active {
+  background-color: #3B72A6;
+  color: #D7ECFF;
+}
+
+#sidebar li a:hover {
+  background-color: #97ABBF;
+  color: #D7ECFF;
 }
 
 .navbar-default {
