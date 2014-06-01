@@ -44,6 +44,13 @@ var stars = [
   "&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"rating-stars\">&#xe612;&#xe612;&#xe612;&#xe612;&#xe612;</span>&nbsp;&nbsp;&nbsp;"
 ];
 
+/*
+ * Fills the table with the postings.
+ *
+ * @param {type} table the table-control which is filled with the items.
+ *
+ * @returns {undefined}
+ */
 function fillTablePostings(table) {
   var html = [];
   var input = POSTINGS.postings;
@@ -65,6 +72,9 @@ function fillTablePostings(table) {
 
 var showLinks = false;
 
+/*
+ * Show or hide external links. This is just for practice
+ */
 function toggleLinks() {
   for (var index = 0; ; index++) {
     var item = document.getElementById("plink-" + index);
