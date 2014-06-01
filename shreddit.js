@@ -4,13 +4,23 @@ var SELECTION_EDIT = 2;
 var SELECTION_SEARCH = 3;
 var ACTIVE_MENU_CLASS = "active";
 
+var SORT_ORDER_TOP_RATED = "top";
+var SORT_ORDER_LEAST_RATED = "least";
+var SORT_ORDER_NEWEST = "newest";
+var SORT_ORDER_OLDEST = "oldest";
+var SORT_ORDER_ALPHABET = "alphabet";
+
+
 var contentPostings;
 var contentEdit;
 var menuPostings;
 var menuEdit;
 var menuSearch;
+var selectSortOrtner;
+var tablePostings;
 
 var currentSelection;
+var currentSortOrder;
 
 /*
  * Adds or removes the class active according to the flag.
@@ -71,16 +81,27 @@ function showHideMenusAndContent(selection) {
 }
 
 /*
+ * Initializes the sort-order.
+ *
+ * @returns {undefined}
+ */
+function initializeSortOrder() {
+  selectSortOrtner.val(SORT_ORDER_NEWEST);
+}
+
+/*
  * Initializes the shreddit page (menu and content).
  *
  * @returns {undefined}
  */
 function initializeShreddit() {
-  contentPostings = $("#posting-list");
-  contentEdit = $("#posting-edit");
-  menuPosting = $("#menu-posting");
-  menuEdit = $("#menu-edit");
-  menuSearch = $("#menu-search");
+  contentPostings = $("#posting-list-id");
+  contentEdit = $("#posting-edit-id");
+  menuPosting = $("#menu-posting-id");
+  menuEdit = $("#menu-edit-id");
+  menuSearch = $("#menu-search-id");
+  selectSortOrtner = $("#posting-sort-order-id");
+  tablePostings = $("#posting-table-id");
 
   //console.log("cp: " + contentPostings + " ep: " + contentEdit + " mp: " + menuPosting + " me: " + menuEdit + " ms: " + menuSearch);
 
@@ -95,29 +116,11 @@ function initializeShreddit() {
   });
 
   showHideMenusAndContent(SELECTION_POSTINGS);
+  initializeSortOrder();
+  fillTablePostings(tablePostings);
 }
 
 /*
  * Initialize when the html-document is fully loaded.
  */
 $(document).ready(initializeShreddit);
-
-
-/*
- 241543903
- 15.05.2014  21:32
- Wenn man in der Google Bildersuche nach "241543903" sucht, findet man Menschen, die ihren Kopf in Kühlschränke stecken.
-
- Versicherte Nase
- 14.05.2014  09:47
- Der Winzer und Weintester Ilja Gort hat seine Nase für 5 Millionen Euro versichern lassen. Die Bedingung der Versicherung war allerdings, dass er weder Motorrad fahren noch boxen noch als Feuerschlucker oder Assistent eines Messerwerfers arbeiten darf.
-
- Pizza
- 30.04.2014  15:22
- Eine Pizza mit dem Radius z und der Dicke a hat das Volumen Pi • z • z • a.
-
- saippuakivikauppias
- 22.04.2011  23:59
- In der finnischen Sprache gibt es das mit 19 Buchstaben weltweit längste Wort, das sich vorwärts und rückwärts lesen lässt: »saippuakivikauppias« - übersetzt etwa »Seifenstein-Verkäufer«.
-
- */

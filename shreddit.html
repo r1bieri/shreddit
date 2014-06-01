@@ -60,39 +60,53 @@
       <div id="sidebar-wrapper" class="col-md-2">
         <div id="sidebar">
           <ul class="nav list-group">
-            <li><a id="menu-posting" class="" href="#"><i class="icon-home icon-1x"></i>Postings</a></li>
-            <li><a id="menu-edit" class="" href="#"><i class="icon-home icon-1x"></i>Create</a></li>
-            <li><a id="menu-search" class="" href="#"><i class="icon-home icon-1x"></i>Search Results</a></li>
+            <li><a id="menu-posting-id" class="" href="#" onclick="blur();"><i class="icon-home icon-1x"></i>Postings</a></li>
+            <li><a id="menu-edit-id" class="" href="#" onclick="blur();"><i class="icon-home icon-1x"></i>Create</a></li>
+            <li><a id="menu-search-id" class="" href="#" onclick="blur();"><i class="icon-home icon-1x"></i>Search Results</a></li>
           </ul>
         </div>
       </div>
 
       <div id="main-wrapper" class="col-md-10 pull-right">
         <div id="main">
-          <div id="posting-list" class="posting-content" style="background-color: yellow;">
-            <p>Lorem ipsum dolor sit amet. Ut vel venenatis nunc, ut porta lacus. Donec ligula felis, tristique ut sollicitudin eget, commodo vel augue. Maecenas quis enim ac elit bibendum tristique. Suspendisse a vestibulum dui. Donec molestie enim vel ornare fermentum. Etiam suscipit, velit et dapibus dapibus, metus tellus convallis nulla, sit amet pharetra magna nunc id mauris. In eget nunc eleifend, aliquet urna sed, viverra ipsum. Quisque fringilla non eros vitae sollicitudin. Pellentesque non nisl est. Suspendisse potenti.</p>
+          <div id="posting-list-id" class="posting-content">
+
+            <table class="posting-view-config">
+              <tr>
+                <td style="text-align: left; font-family: icomoon;"><a href="#" onclick="toggleLinks();" title="Show/Hide external Links (just for exercise)" onclick="blur();">&#xe60e;</a></td>
+                <td>Sort Order&colon;&nbsp;&nbsp;</td>
+                <td class="posting-sort-order-frame">
+                  <select id="posting-sort-order-id" class="posting-sort-order form-control">
+                    <option value="top" label="Top Rated">Top Rated</option>
+                    <option value="least" label="Least Rated">Least Rated</option>
+                    <option value="newest" label="Newest">Newest</option>
+                    <option value="oldest" label="Oldest">Oldest</option>
+                    <option value="alphabet" label="Alphabetically">Alphabetically</option>
+                  </select>
+
+                </td>
+              </tr>
+            </table>
+
+            <table id="posting-table-id" class="posting-table">
+              <!--
+              <tr><td class="posting-title">Abc</td><td class="posting-rating">fridge&nbsp;&nbsp;&nbsp;&nbsp;<span class="rating-stars">&#xe612;&#xe612;&#xe612;&#xe611;&#xe610;</span>&nbsp;&nbsp;&nbsp;06.06.2014  14:09</td></tr>
+              <tr><td colspan="2" class="posting-descr">Lorem ipsum dolor sit amet. Ut vel venenatis nunc, ut porta lacus. Donec ligula felis, tristique ut sollicitudin eget, commodo vel augue. Maecenas quis enim ac elit bibendum tristique. Suspendisse a vestibulum dui.</td></tr>
+
+              <tr><td class="posting-title">Abc</td><td class="posting-rating">***** 06.06.2014  14:09</td></tr>
+              <tr><td colspan="2" class="posting-descr">Lorem ipsum dolor sit amet. Ut vel venenatis nunc, ut porta lacus. Donec ligula felis, tristique ut sollicitudin eget, commodo vel augue. Maecenas quis enim ac elit bibendum tristique. Suspendisse a vestibulum dui.</td></tr>
+              -->
+            </table>
+
           </div>
 
-          <div id="posting-edit" class="posting-content" style="background-color: lightgreen;">
+          <div id="posting-edit-id" class="posting-content" style="background-color: lightgreen;">
             <p>Yet to be done!</p>
           </div>
 
-          <!--
-          <div class="page-header">
-            <h3>Admin</h3>
-          </div>
-          <p>Lorem ipsum dolor sit amet. Ut vel venenatis nunc, ut porta lacus. Donec ligula felis, tristique ut sollicitudin eget, commodo vel augue. Maecenas quis enim ac elit bibendum tristique. Suspendisse a vestibulum dui. Donec molestie enim vel ornare fermentum. Etiam suscipit, velit et dapibus dapibus, metus tellus convallis nulla, sit amet pharetra magna nunc id mauris. In eget nunc eleifend, aliquet urna sed, viverra ipsum. Quisque fringilla non eros vitae sollicitudin. Pellentesque non nisl est. Suspendisse potenti.</p>
-          <p>Lorem ipsum dolor sit amet. Ut vel venenatis nunc, ut porta lacus. Donec ligula felis, tristique ut sollicitudin eget, commodo vel augue. Maecenas quis enim ac elit bibendum tristique. Suspendisse a vestibulum dui. Donec molestie enim vel ornare fermentum. Etiam suscipit, velit et dapibus dapibus, metus tellus convallis nulla, sit amet pharetra magna nunc id mauris. In eget nunc eleifend, aliquet urna sed, viverra ipsum. Quisque fringilla non eros vitae sollicitudin. Pellentesque non nisl est. Suspendisse potenti.</p>
-          <p>Lorem ipsum dolor sit amet. Ut vel venenatis nunc, ut porta lacus. Donec ligula felis, tristique ut sollicitudin eget, commodo vel augue. Maecenas quis enim ac elit bibendum tristique. Suspendisse a vestibulum dui. Donec molestie enim vel ornare fermentum. Etiam suscipit, velit et dapibus dapibus, metus tellus convallis nulla, sit amet pharetra magna nunc id mauris. In eget nunc eleifend, aliquet urna sed, viverra ipsum. Quisque fringilla non eros vitae sollicitudin. Pellentesque non nisl est. Suspendisse potenti.</p>
-          <p>Lorem ipsum dolor sit amet. Ut vel venenatis nunc, ut porta lacus. Donec ligula felis, tristique ut sollicitudin eget, commodo vel augue. Maecenas quis enim ac elit bibendum tristique. Suspendisse a vestibulum dui. Donec molestie enim vel ornare fermentum. Etiam suscipit, velit et dapibus dapibus, metus tellus convallis nulla, sit amet pharetra magna nunc id mauris. In eget nunc eleifend, aliquet urna sed, viverra ipsum. Quisque fringilla non eros vitae sollicitudin. Pellentesque non nisl est. Suspendisse potenti.</p>
-          -->
         </div>
       </div>
     </div>
-
-
-
-
 
 
     <div id="footer" class="container">
@@ -108,6 +122,7 @@
     <script src="files/jquery.min.js"></script>
     <script src="files/bootstrap.min.js"></script>
     <script src="files/scripts.js"></script>
-    <script type="text/javascript" src="shreddit.js"></script>
+    <script src="shreddit-data.js" type="text/javascript"></script>
+    <script src="shreddit.js" type="text/javascript"></script>
   </body>
 </html>
