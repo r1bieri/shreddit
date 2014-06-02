@@ -84,7 +84,7 @@ function toggleLinks() {
     if (showLinks) {
       item.innerHTML = "";
     } else {
-      item.innerHTML = "<br>&gt;&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"" + item.getAttribute("data-url") + "\" target=\"_blank\">" + item.getAttribute("data-name") + "</a>";
+      item.innerHTML = "<br><span class=\"icon-font\">&#xe618;</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href=\"" + item.getAttribute("data-url") + "\" target=\"_blank\">" + item.getAttribute("data-name") + "</a>";
     }
   }
   showLinks = !showLinks;

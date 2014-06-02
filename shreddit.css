@@ -48,10 +48,19 @@ header {
 
 .impressum {
   margin-top: 8px;
-  color: #d7ecff;
+  color: #eeeeee;
   background-color: #3b72a6;
   text-align: center;
   vertical-align: middle;
+}
+
+a.about-link {
+  color: #eeeeee;
+  text-decoration: none;
+}
+
+a.about-link:hover {
+  font-weight: bold;
 }
 
 .credit {
@@ -100,6 +109,26 @@ header {
 .rating-stars {
   font-family: "icomoon";
   color: #F4E324;
+}
+
+.icon-font {
+  font-family: "icomoon";
+  font-weight: bold;
+  color: #c7254e;
+}
+
+#posting-credit-id, #posting-edit-id {
+  margin-top: 50px;
+}
+
+.about-info {
+  font-weight: bold;
+  padding: 0px 0px 15px 0px;
+}
+
+.about-label {
+  font-style: italic;
+  padding: 0px 25px 15px 0px;
 }
 
 .collapsed, .icon-user, .icon-1x, .icon-reorder, .icon-home, .icon-sort-down, .navbar-inner, .navbar-content-center, .selectpicker {
