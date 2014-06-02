@@ -46,6 +46,11 @@ header {
   padding: 0 7px;
 }
 
+.search-input {
+  width: auto;
+  margin-right: 6px;
+}
+
 .impressum {
   margin-top: 8px;
   color: #eeeeee;
