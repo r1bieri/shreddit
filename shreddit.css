@@ -80,7 +80,8 @@ a.about-link:hover {
 }
 
 .posting-sort-order {
-  width: 150px;
+  width: 170px;
+  margin-right: 3px;
 }
 
 .posting-sort-order-frame {

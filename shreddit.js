@@ -18,7 +18,7 @@ var contentAbout;
 var menuPostings;
 var menuEdit;
 var menuSearch;
-var selectSortOrtner;
+var selectSortOrder;
 var tablePostings;
 
 var currentSelection;
@@ -90,13 +90,30 @@ function showHideMenusAndContent(selection) {
   // console.log("Selection: " + currentSelection);
 }
 
+function changeSortOrder(order) {
+  console.log(order);
+  if (order === SORT_ORDER_LEAST_RATED) {
+    sortLeastRated();
+  } else if (order === SORT_ORDER_NEWEST) {
+    sortNewest();
+  } else if (order === SORT_ORDER_OLDEST) {
+    sortOldest();
+  } else if (order === SORT_ORDER_ALPHABET) {
+    sortAlphabet();
+  } else {
+    sortTopRated();
+  }
+  fillTablePostings(tablePostings);
+}
+
 /*
  * Initializes the sort-order.
  *
  * @returns {undefined}
  */
 function initializeSortOrder() {
-  selectSortOrtner.val(SORT_ORDER_NEWEST);
+  selectSortOrder.val(SORT_ORDER_NEWEST);
+  sortNewest();
 }
 
 /*
@@ -105,13 +122,16 @@ function initializeSortOrder() {
  * @returns {undefined}
  */
 function initializeShreddit() {
+
+  preparePostings();
+
   contentPostings = $("#posting-list-id");
   contentEdit = $("#posting-edit-id");
   contentAbout = $("#posting-credit-id");
   menuPosting = $("#menu-posting-id");
   menuEdit = $("#menu-edit-id");
   menuSearch = $("#menu-search-id");
-  selectSortOrtner = $("#posting-sort-order-id");
+  selectSortOrder = $("#posting-sort-order-id");
   tablePostings = $("#posting-table-id");
 
   //console.log("cp: " + contentPostings + " ep: " + contentEdit + " mp: " + menuPosting + " me: " + menuEdit + " ms: " + menuSearch);
@@ -127,6 +147,9 @@ function initializeShreddit() {
   });
   $("#show-credit-id").bind("click", function() {
     showHideMenusAndContent(SELECTION_ABOUT);
+  });
+  selectSortOrder.bind("change", function() {
+    changeSortOrder(selectSortOrder.val());
   });
 
   showHideMenusAndContent(SELECTION_POSTINGS);
