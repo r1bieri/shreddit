@@ -3,7 +3,7 @@ var SELECTION_POSTINGS = 1;
 var SELECTION_EDIT = 2;
 var SELECTION_SEARCH = 3;
 var SELECTION_ABOUT = 4;
-var ACTIVE_MENU_CLASS = "active";
+var ACTIVE_MENU_CLASS = "menu-button-active";
 
 var SORT_ORDER_TOP_RATED = "top";
 var SORT_ORDER_LEAST_RATED = "least";

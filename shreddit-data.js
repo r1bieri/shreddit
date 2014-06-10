@@ -151,4 +151,5 @@ function toggleLinks() {
     }
   }
   showLinks = !showLinks;
+  blur();
 }

@@ -26,18 +26,27 @@ header, main, aside, footer {
   .nav {
     width: 10rem;
     line-height: 2rem;
-    top: 4.2rem;
+    top: 6.7rem;
     bottom: 2.2rem;
     margin: 0.1rem;
     position: fixed;
     right: 0px;
     left: 0px;
   }
+  .command {
+    font-size: 0.75rem;
+    left: 10.2rem;
+    right: 0;
+    top: 4.3rem;
+    height: 2.2rem;
+    margin: 0.1rem 2rem 0.1rem 1rem;
+    position: fixed;
+  }
   .main {
     font-size: 0.75rem;
     left: 10.2rem;
     right: 0;
-    top: 4.2rem;
+    top: 6.7rem;
     bottom: 2.2rem;
     margin: 0.1rem;
     position: fixed;
@@ -57,9 +66,18 @@ header, main, aside, footer {
     right: 0px;
     left: 0px;
   }
+  .command {
+    font-size: 0.75rem;
+    left: 10.2rem;
+    right: 0;
+    top: 4.2rem;
+    height: 2.2rem;
+    margin: 0.1rem;
+    position: fixed;
+  }
   .main {
     font-size: 0.75rem;
-    top: 4.2rem;
+    top: 6.6rem;
     bottom: 2.1rem;
     margin: 0.1rem;
     position: fixed;
@@ -85,14 +103,14 @@ header, main, aside, footer {
   background-image: -ms-linear-gradient(top, #D7ECFF, #B7DCFF);
   background-image: -o-linear-gradient(top, #D7ECFF, #B7DCFF);
   background-image: linear-gradient(to bottom, #D7ECFF, #B7DCFF);
-  -webkit-border-radius: 2;
-  -moz-border-radius: 2;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
   padding-left: 0.5rem;
   border: solid #433DA6 1px;
   text-decoration: none;
 }
-.menu-button:hover {
+.menu-button:hover, .menu-button-active {
   background: #3B72A6;
   background-image: -webkit-linear-gradient(top, #3B72A6, #4B72A6);
   background-image: -moz-linear-gradient(top, #3B72A6, #4B72A6);
@@ -118,6 +136,7 @@ header, main, aside, footer {
   -webkit-box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,1);
   -moz-box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,1);
   box-shadow: inset 0px 0px 10px 0px rgba(255,255,255,1);
+  border-bottom: 2px solid #3B72A6;
 }
 
 .footer {
@@ -132,7 +151,7 @@ header, main, aside, footer {
   left: 0px;
 }
 .header-icon {
-  width: 7rem;
+  width: 9rem;
   padding-left: 1rem;
 }
 .header-title {
@@ -141,9 +160,13 @@ header, main, aside, footer {
   padding-left: 0;
 }
 .header-cell {
-  /*border: 1px solid red;*/
   display:table-cell;
   height: 4rem;
+  vertical-align: middle;
+}
+.command-cell {
+  display:table-cell;
+  height: 2rem;
   vertical-align: middle;
 }
 .credit {
@@ -163,7 +186,76 @@ a:hover {
   font-weight: bold;
 }
 
+.posting-view-config {
+  padding: 0px 8px 15px 8px;
+  width: 100%;
+  text-align: right;
+  margin-bottom: 18px;
+}
 
+.posting-sort-order {
+  width: 170px;
+  margin-right: 3px;
+}
+
+.posting-sort-order-frame {
+  width: 152px;
+}
+
+.posting-table {
+  padding: 3px 8px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.posting-table td {
+  padding: 3px 8px;
+}
+
+.posting-title {
+  font-weight: bolder;
+  background-color: white;
+}
+
+.posting-rating {
+  text-align: right;
+  background-color: white;
+}
+
+.posting-descr {
+  background-color: white;
+  border-bottom: 6px solid #EEEEEE;
+}
+
+.rating-stars {
+  font-family: "icomoon";
+  color: #F4E324;
+}
+
+.icon-font {
+  font-family: "icomoon";
+  font-weight: bold;
+  color: #c7254e;
+}
+
+#posting-credit-id, #posting-edit-id {
+  margin-top: 50px;
+}
+
+.about-info {
+  font-weight: bold;
+  padding: 0px 0px 15px 0px;
+}
+
+.about-label {
+  font-style: italic;
+  padding: 0px 25px 15px 0px;
+}
+
+.posting-content {
+  padding: 0 7px;
+}
 
 .content {
   display: flex;
