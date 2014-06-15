@@ -95,7 +95,7 @@ header, main, aside, footer {
   border: 1px solid #433DA6;
   display: block;
   width: 10rem;
-  height: 3rem;
+  height: 2rem;
   margin-bottom: 0.2rem;
   background: #D7ECFF;
   background-image: -webkit-linear-gradient(top, #D7ECFF, #B7DCFF);
@@ -237,10 +237,6 @@ a:hover {
   font-family: "icomoon";
   font-weight: bold;
   color: #c7254e;
-}
-
-#posting-credit-id, #posting-edit-id {
-  margin-top: 50px;
 }
 
 .about-info {

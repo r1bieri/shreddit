@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>S H R E D D I T   -   useless postings</title>
     <link rel="shortcut icon" href="files/shreddit-icon.png" />
-    <link type="text/css" href="shreddit2.css" rel="stylesheet" />
+    <link type="text/css" href="files/shreddit3.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -18,14 +18,15 @@
     <nav class="nav" role="navigation">
       <button id="menu-posting-id" class="menu-button" type="button" onclick="blur();">Postings</button>
       <button id="menu-edit-id" class="menu-button" type="button" onclick="blur();">Create</button>
-      <button id="menu-search-id" class="menu-button" type="button" onclick="blur();">Search Results</button>
-
+      <button id="menu-search-id" class="menu-button" type="button" onclick="blur();">Search&nbsp;Results</button>
     </nav>
 
     <nav class="command" role="navigation">
+      <!--
       <div class="command-cell" style="text-align: left; font-size: 1.5rem; font-family: icomoon; padding-right: 3rem;">
         <a href="#" onclick="toggleLinks();" title="Show/Hide external Links (just for exercise)">&#xe60e;</a>
       </div>
+      -->
       <div class="command-cell">
         Sort Order&colon;&nbsp;&nbsp;
       </div>
@@ -59,11 +60,11 @@
     </div>
 
     <div id="posting-edit-id" class="posting-content" style="background-color: lightgreen;">
-      <p>Yet to be done!</p>
+      <p class="heading-top">Yet to be done!</p>
     </div>
 
     <div id="posting-credit-id" class="posting-content">
-      <h3>About ... S H R E D D I T</h3>
+      <h2 class="heading-top">About ... S H R E D D I T</h2>
       <br/>
       <table id="credit-table-id" class="">
         <tr><td class="about-label">Authors&colon;</td><td class="about-info">Rolf Bieri &amp; Rolf Stutz</td></tr>
@@ -71,7 +72,7 @@
         <tr><td class="about-label">For&colon;</td><td class="about-info">CAS Frontend Engineering 2014 <a href="http://www.hsr.ch/Front-End-Engineering.12432.0.html" target="_blank">HSR</a></td></tr>
       </table>
       <br/>
-      <h4>Description</h4>
+      <h3>Description</h3>
       <p>SHREDDIT is a satirical clone of <a href="http://www.reddit.com" target="_blank">reddit.com</a>. It has been developed for practical reasons to learn and exercise HTML, CSS and JavaScript.</p>
     </div>
 
