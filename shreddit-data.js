@@ -104,13 +104,14 @@ function fillTablePostings(table) {
     var item = input[index];
     html.push("<tr><td class=\"posting-title\">",
             item.shortName,
-            "</td><td class=\"posting-rating\">",
+            "</td><td class=\"posting-by\">",
             item.by,
+            "</td><td class=\"posting-rating\">",
             stars[item.rating],
             item.dateString,
-            "</td></tr><tr><td colspan=\"2\" class=\"posting-descr\">",
+            "</td></tr><tr><td colspan=\"3\" class=\"posting-descr\">",
             item.description,
-            "<span id=\"plink-" + index + "\" data-url=\"" + item.linkURL + "\" data-name=\"" + item.linkName + "\"></span></td></tr>\n");
+            "</td></tr>\n");
   }
   table.html(html.join(''));
 }
