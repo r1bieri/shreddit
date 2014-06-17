@@ -28,7 +28,7 @@ footer {
     position: fixed;
     right: 0;
     left: 0;
-    margin-left: 0.3rem;
+    margin: 0.3rem 0 0.3rem 0.3rem;
   }
   .command {
     font-size: 0.925rem;
@@ -36,6 +36,7 @@ footer {
     right: 0;
     top: 4.3rem;
     height: 2.5rem;
+    margin-top: 0.3rem;
     position: fixed;
     margin-right: 0.3rem;
   }
@@ -45,7 +46,7 @@ footer {
     right: 0;
     top: 7.1rem;
     bottom: 2.3rem;
-    margin-right: 0.3rem;
+    margin: 0.3rem 0.3rem 0 0;
     position: fixed;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -59,6 +60,10 @@ footer {
     font-weight: bold;
     padding-left: 0;
   }
+  .header-icon {
+    width: 9rem;
+    padding-left: 0.925rem;
+  }
 }
 @media screen and (max-width: 600px) {
   .nav {
@@ -67,7 +72,7 @@ footer {
     right: 0;
     left: 0;
     position: fixed;
-    margin-left: 0.3rem;
+    margin: 0.3rem 0.3rem 0.3rem 0.3rem;
   }
   .command {
     top: 7.1rem;
@@ -75,7 +80,7 @@ footer {
     left: 0;
     right: 0;
     position: fixed;
-    margin-right: 0.3rem;
+    margin: 0.3rem 0.3rem 0.3rem 0.3rem;
     font-size: 0.925rem;
   }
   .main {
@@ -84,7 +89,7 @@ footer {
     right: 0px;
     left: 0px;
     position: fixed;
-    margin-right: 0.3rem;
+    margin: 0.3rem 0.3rem 0.3rem 0.3rem;
     font-size: 0.925rem;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -96,8 +101,12 @@ footer {
     overflow: hidden;
   }
   .header-title {
-    font-size: 1.75rem;
+    font-size: 1.3rem;
     font-weight: bold;
+    padding-left: 1rem;
+  }
+  .header-icon {
+    width: 39;
     padding-left: 0;
   }
 }
@@ -144,10 +153,6 @@ footer {
   line-height: 2rem;
   text-align: center;
 }
-.header-icon {
-  width: 9rem;
-  padding-left: 0.925rem;
-}
 .header-cell {
   display: table-cell;
   height: 4rem;
@@ -178,15 +183,15 @@ a:hover {
   margin-bottom: 18px;
 }
 .posting-sort-order {
-  width: 170px;
+  width: 9rem;
   margin-right: 3px;
 }
 .posting-sort-order-frame {
-  width: 152px;
+  width: 9rem;
 }
 .posting-table {
   padding: 3px 8px;
-  width: 100%;
+  width: 96%;
   border: none;
   border-collapse: collapse;
   border-spacing: 0;
@@ -198,19 +203,20 @@ a:hover {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 1.25rem;
   font-weight: bolder;
-  background-color: #ffffff;
+  background-color: papayawhip;
+  /* @backgroundPostings;*/
   overflow: hidden;
 }
 .posting-rating {
   text-align: right;
-  background-color: #ffffff;
-  width: 12rem;
-  overflow: hidden;
+  background-color: #ac2925;
+  /* @backgroundPostings;*/
+  /*width: @widthPostingRating;overflow: hidden;*/
 }
 .posting-by {
-  background-color: #ffffff;
-  width: 7rem;
-  overflow: hidden;
+  background-color: #c1e2b3;
+  /* @backgroundPostings;*/
+  /*width: @widthPostingBy;overflow: hidden;*/
 }
 .posting-descr {
   background-color: #ffffff;

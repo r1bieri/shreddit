@@ -16,7 +16,7 @@
 @fontSizeTitle: 1.25rem;
 @fontSizeButton: 1.1rem;
 @fontSizeHeader: 2rem;
-@fontSizeHeaderSmall: 1.75rem;
+@fontSizeHeaderSmall: 1.3rem;
 
 
 @font-face {
@@ -60,7 +60,7 @@ header, main, aside, footer {
     position: fixed;
     right: 0;
     left: 0;
-    margin-left: @gridMargin;
+    margin: @gridMargin 0  @gridMargin @gridMargin;
   }
   .command {
     font-size: @fontSizeText;
@@ -68,6 +68,7 @@ header, main, aside, footer {
     right: 0;
     top: @heightHeader + @gridMargin;
     height: @heightCommand;
+    margin-top: @gridMargin;
     position: fixed;
     margin-right: @gridMargin;
   }
@@ -77,7 +78,7 @@ header, main, aside, footer {
     right: 0;
     top: @heightHeader + @gridMargin + @heightCommand + @gridMargin;
     bottom: @heightFooter + @gridMargin;
-    margin-right: @gridMargin;
+    margin: @gridMargin @gridMargin 0 0;
     position: fixed;
     overflow-x:hidden;
     overflow-y:scroll;
@@ -91,6 +92,10 @@ header, main, aside, footer {
     font-weight: bold;
     padding-left: 0;
   }
+  .header-icon {
+    width: @widthNav - 1rem;
+    padding-left: @fontSizeText;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -100,7 +105,7 @@ header, main, aside, footer {
     right: 0;
     left: 0;
     position: fixed;
-    margin-left: @gridMargin;
+    margin: @gridMargin @gridMargin @gridMargin @gridMargin;
   }
   .command {
     top: @heightHeader + @gridMargin + @heightNav + @gridMargin;
@@ -108,7 +113,7 @@ header, main, aside, footer {
     left: 0;
     right: 0;
     position: fixed;
-    margin-right: @gridMargin;
+    margin: @gridMargin @gridMargin @gridMargin @gridMargin;
 
     font-size: @fontSizeText;
   }
@@ -118,7 +123,7 @@ header, main, aside, footer {
     right: 0px;
     left: 0px;
     position: fixed;
-    margin-right: @gridMargin;
+    margin: @gridMargin @gridMargin @gridMargin @gridMargin;
 
     font-size: @fontSizeText;
     overflow-x: hidden;
@@ -133,6 +138,10 @@ header, main, aside, footer {
   .header-title {
     font-size: @fontSizeHeaderSmall;
     font-weight: bold;
+    padding-left: 1rem;
+  }
+  .header-icon {
+    width: 39;
     padding-left: 0;
   }
 }
@@ -183,10 +192,6 @@ header, main, aside, footer {
   line-height: 2rem;
   text-align: center;
 }
-.header-icon {
-  width: @widthNav - 1rem;
-  padding-left: @fontSizeText;
-}
 .header-cell {
   display:table-cell;
   height: @heightHeader;
@@ -222,17 +227,17 @@ a:hover {
 }
 
 .posting-sort-order {
-  width: 170px;
+  width: 9rem;
   margin-right: 3px;
 }
 
 .posting-sort-order-frame {
-  width: 152px;
+  width: 9rem;
 }
 
 .posting-table {
   padding: 3px 8px;
-  width: 100%;
+  width: 96%;
   border: none;
   border-collapse: collapse;
   border-spacing: 0;
@@ -246,21 +251,21 @@ a:hover {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: @fontSizeTitle;
   font-weight: bolder;
-  background-color: @backgroundPostings;
+  background-color: papayawhip;/* @backgroundPostings;*/
   overflow: hidden;
 }
 
 .posting-rating {
   text-align: right;
-  background-color: @backgroundPostings;
-  width: @widthPostingRating;
-  overflow: hidden;
+  background-color: #ac2925; /* @backgroundPostings;*/
+  /*width: @widthPostingRating;overflow: hidden;*/
+
 }
 
 .posting-by {
-  background-color: @backgroundPostings;
-  width: @widthPostingBy;
-  overflow: hidden;
+  background-color: #c1e2b3; /* @backgroundPostings;*/
+  /*width: @widthPostingBy;overflow: hidden;*/
+
 }
 
 .posting-descr {
